@@ -1,0 +1,12 @@
+{
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "java.project.sourcePaths": [
+        "ServerCode\\src\\main\\java\\com\\tom\\employeemanager",
+        "ServerCode\\src\\main\\java\\com\\tom\\employeemanager\\exceptions",
+        "ServerCode\\src\\main\\java\\com\\tom\\employeemanager\\model",
+        "ServerCode\\src\\main\\java\\com\\tom\\employeemanager\\repositories",
+        "ServerCode\\src\\main\\java\\com\\tom\\employeemanager\\Services",
+        "ServerCode\\src\\main\\resources",
+        "ServerCode\\src\\test\\java\\com\\tom\\employeemanager"
+    ]
+}
