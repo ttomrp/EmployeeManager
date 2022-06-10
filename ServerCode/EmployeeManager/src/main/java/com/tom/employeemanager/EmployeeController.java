@@ -18,8 +18,8 @@ import com.tom.employeemanager.Services.EmployeeService;
 import com.tom.employeemanager.model.Employee;
 
 /*
- * @CrossOrigin enables CORS configuration for accepted origins.  
- * This lets different urls access our backent on localhost:8080
+ * @CrossOrigin provides CORS configuration for accepted origins.  
+ * This lets different urls access our backend.
  */
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
