@@ -106,22 +106,17 @@ export class AppComponent implements OnInit {
     button.style.display = 'none';
     button.setAttribute('data-toggle', 'modal');
 
-    if (employee !== null) {
-      switch (mode) {
-        case 'add':
-          button.setAttribute('data-target', '#addEmployeeModal');
-          break;
-        case 'edit':
-          this.editEmployee = employee;
-          button.setAttribute('data-target', '#updateEmployeeModal');
-          break;
-        case 'delete':
-          this.deleteEmployee = employee;
-          button.setAttribute('data-target', '#deleteEmployeeModal');
-          break;
-      }
+    if (mode === 'add') {
+      button.setAttribute('data-target', '#addEmployeeModal');
     }
-
+    if (mode === 'edit' && employee !== null) {
+      this.editEmployee = employee;
+      button.setAttribute('data-target', '#updateEmployeeModal');
+    }
+    if (mode === 'delete' && employee !== null) {
+      this.deleteEmployee = employee;
+      button.setAttribute('data-target', '#deleteEmployeeModal');
+    }
     container?.appendChild(button);
     button.click();
   }

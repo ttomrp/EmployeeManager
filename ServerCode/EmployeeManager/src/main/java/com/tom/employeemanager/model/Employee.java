@@ -28,7 +28,8 @@ public class Employee implements Serializable {
     private String phoneNumber;
     @Column
     private String imageUrl;
-    @Column
+
+    @Column(nullable = false, updatable = false)
     private String employeeCode;
 
     // CONSTRUCTORS
@@ -36,13 +37,13 @@ public class Employee implements Serializable {
     public Employee() {
     }
 
-    public Employee(String name, String email, String jobTitle, String phone, String imageUrl, String empCode) {
+    public Employee(String name, String email, String jobTitle, String phone, String imageUrl, String code) {
         this.name = name;
         this.email = email;
         this.jobTitle = jobTitle;
         this.phoneNumber = phone;
         this.imageUrl = imageUrl;
-        this.employeeCode = empCode;
+        this.employeeCode = code;
     }
 
     // GETTERS & SETTERS
