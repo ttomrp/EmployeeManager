@@ -127,7 +127,7 @@
             </div>
             <div class="form-group">
               <label for="phone">Phone</label>
-              <input type="text" ngModel="{{editEmployee?.phone}}" name="phone" class="form-control" id="phone"
+              <input type="text" ngModel="{{editEmployee?.phoneNumber}}" name="phone" class="form-control" id="phone"
                 name="phone" placeholder="Phone">
             </div>
             <div class="form-group">
@@ -161,7 +161,7 @@
           <p>Are you sure you want to delete employee {{deleteEmployee?.name}}?</p>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
-            <button (click)="onDeleteEmloyee(deleteEmployee?.id)" class="btn btn-danger"
+            <button (click)="onDeleteEmloyee(deleteEmployee.id)" class="btn btn-danger"
               data-dismiss="modal">Yes</button>
           </div>
         </div>

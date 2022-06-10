@@ -14,6 +14,8 @@ export class AppComponent implements OnInit {
 
   // TODO: note the '!' was added to avoid an error.  currently unsure why.
   public employees!: Employee[];
+  public editEmployee!: Employee;
+  public deleteEmployee!: Employee;
 
   constructor(private employeeService: EmployeeService) { }
 
@@ -95,7 +97,7 @@ export class AppComponent implements OnInit {
   /*
     Programatically adding a button.
   */
-  public onOpenModal(employee: Employee, mode: string): void {
+  public onOpenModal(employee: Employee | null, mode: string): void {
 
     const container = document.getElementById('main-container');
 
@@ -104,16 +106,20 @@ export class AppComponent implements OnInit {
     button.style.display = 'none';
     button.setAttribute('data-toggle', 'modal');
 
-    switch (mode) {
-      case 'add':
-        button.setAttribute('data-target', '#addEmployeeModal');
-        break;
-      case 'edit':
-        button.setAttribute('data-target', '#updateEmployeeModal');
-        break;
-      case 'delete':
-        button.setAttribute('data-target', '#deleteEmployeeModal');
-        break;
+    if (employee !== null) {
+      switch (mode) {
+        case 'add':
+          button.setAttribute('data-target', '#addEmployeeModal');
+          break;
+        case 'edit':
+          this.editEmployee = employee;
+          button.setAttribute('data-target', '#updateEmployeeModal');
+          break;
+        case 'delete':
+          this.deleteEmployee = employee;
+          button.setAttribute('data-target', '#deleteEmployeeModal');
+          break;
+      }
     }
 
     container?.appendChild(button);
