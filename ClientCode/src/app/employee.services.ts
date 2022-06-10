@@ -26,21 +26,21 @@ export class EmployeeService {
     /*
     POST Request
     */
-    public addEmployees(employee: Employee): Observable<Employee> {
+    public addEmployee(employee: Employee): Observable<Employee> {
         return this.http.post<Employee>(`${this.apiServerUrl}/employee/add`, employee);
     }
 
     /*
     PUT Request
     */
-    public updateEmployees(employee: Employee): Observable<Employee> {
+    public updateEmployee(employee: Employee): Observable<Employee> {
         return this.http.put<Employee>(`${this.apiServerUrl}/employee/update`, employee);
     }
 
     /*
     DELETE Request
     */
-    public deleteEmployees(employeeId: number): Observable<void> {
+    public deleteEmployee(employeeId: number): Observable<void> {
         return this.http.delete<void>(`${this.apiServerUrl}/employee/delete/${employeeId}`);
     }
 }
