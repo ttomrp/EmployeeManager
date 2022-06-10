@@ -12,7 +12,7 @@ import { EmployeeService } from './employee.services';
 export class AppComponent implements OnInit {
   title = 'ClientCode';
 
-  // TODO: note the '!' was added to avoid an error.  currently unsure why.
+  // note the '!' was added to avoid an error.  currently unsure why.
   public employees!: Employee[];
   public editEmployee!: Employee;
   public deleteEmployee!: Employee;

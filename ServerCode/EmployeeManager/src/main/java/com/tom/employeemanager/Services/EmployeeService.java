@@ -34,6 +34,8 @@ public class EmployeeService {
         return employeerepository.findAll();
     }
 
+    // TODO: When updating an employee from the UI form, the employeeCode gets reset
+    // to null
     public Employee updateEmployee(Employee employee) {
         return employeerepository.save(employee);
     }
